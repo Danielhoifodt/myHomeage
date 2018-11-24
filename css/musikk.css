@@ -1,0 +1,206 @@
+.body{
+    background-color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left:150px;
+    margin-right:150px;
+}
+
+
+#header{
+    background-color: gainsboro;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding:5px;
+    font-size:16pt;
+
+
+}
+#h1{
+    margin-top:50px;
+}
+#h2{
+    width:500px;
+}
+#konsulent {
+    color: #409600;
+    text-decoration: underline;
+}
+#overskrift{
+    padding-left:10px;
+    color:grey;
+}
+ul{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+ul li ul li{
+    display:none;
+    font-size: 17pt;
+}
+ul li:hover ul li{
+    display:block;
+    animation:load 1s forwards;
+    
+}
+@keyframes load{
+    0%{
+        opacity:0;
+    }
+    
+    100%{
+        opacity:1;
+    }
+}
+li {
+    border-radius: 30px;
+    border-style: none;
+    border-color:#409600;
+    padding:10px;
+    background-color:gainsboro;
+
+}
+a{
+    text-decoration: none;
+    
+}
+a:link{
+    color:grey;
+}
+a:active{
+    color:grey;
+}
+a:visited{
+    color:grey;
+}
+a:hover{
+    color:#409600;
+}
+.foolink:link{
+    color:black;
+}
+.foolink:active{
+    color:black;
+}
+.foolink:visited{
+    color:black;
+}
+.foolink:hover{
+    color:black;
+}
+.navigasjon{
+    float:right;
+}
+#liste{
+    background-color: gainsboro;
+    font-family: 'Courier New', Courier, monospace;
+    list-style-type:none;
+    text-align: center;
+}
+#liste > li{
+    display:inline-block;
+}
+.main{
+    color:white;
+    text-align:center;
+    margin-left:100px;
+    margin-right:100px;
+    font-size: 13pt;
+}
+.main-bilde{
+    width:400px;
+    border:7px solid #409600;
+    border-radius: 30px;
+    
+}
+.musikk{
+    text-align:center;
+    color:gainsboro;
+
+}
+.link{
+    color:black;
+
+
+}
+.link:link{
+    color:black;
+}
+.link:active{
+    color:black;
+}
+.link:visited{
+    color:black;
+}
+.link:hover{
+    color:black;
+}
+.f{
+    width:13px;
+}
+#footer{
+    text-align:center;
+    font-weight:300;
+}
+@media(max-width:1200px) {
+    #overskrift{
+        padding-left:none;
+
+    }
+    .main{
+        margin:20px;
+        font-size: 10pt;
+        padding:none;
+        text-align:center;
+    }
+    #h1{
+        margin-top:20px;
+        width:300px;
+    }
+    #h2{
+        width:200px;
+    }
+    #header{
+        font-size: 10pt;
+    }
+    .main-bilde{
+        width:200px;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    li {
+        border-radius: 0px;
+        border-style: none;
+        border-color:none;
+        padding:5px;
+        background-color:gainsboro;
+    
+    }
+    a{
+        text-decoration: underline;
+        
+    }
+    a:link{
+        color:#409600;
+    }
+    a:active{
+        color:#409600;
+    }
+    a:visited{
+        color:#409600;
+    }
+    a:hover{
+        color:#409600;
+    }
+    .menu{
+        width:50px;
+        height:50px;
+    }
+    .body{
+        margin-left:5px;
+        margin-right:5px;
+    }
+}

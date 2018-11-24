@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="media/favicon.png">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <title>Daniel Høifødt - hovedside</title>
+</head>
+<body class="body">
+    <header id="header">
+        <div id="overskrift">
+            <img id="h1" src="media/h1_header.png" alt="overskrift"><br>
+            <img id="h2" src="media/h2.png" alt="overskrifth2">
+            <div id="container"> 
+            <ul id="liste">
+                    <li><a><img class="menu" src="media/menu.png"></a>
+                        <ul>
+                            <li>
+                                <a href="index.html"><b>Hjem</b></a>
+                            </li>
+                            <li>
+                                <a id="konsulent" href="konsulent.html"><b>Jobbe?</b></a>
+                            </li>
+                            <li>
+                                <a href="bilder.html"><b>Bilder</b></a>
+                            </li>
+                            <li>
+                                <a href="tester.html"><b>Tester</b></a>
+                            </li>
+                            <li>
+                                    <a href="musikk.html"><b>Musikk</b></a>
+                                </li>
+                            <li><a href="video.html"><b>Video</b></a></li>
+                            <li>
+                                <a href="om.html"><b>Om meg</b></a>
+                            </li>        
+                            <li>
+                                <a href="kontakt.html"><b>Kontakt</b></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+            
+        </div>
+    </header>
+    <main class="main">
+        <h3>Velkommen</h3>
+        <p>Du har kommet til Daniel Høifødt sin hjemmeside. Her finner alt fra videoer om HTML til dikt, og så fungerer den som en blog-side hvor jeg poster bilder og musikk.
+            Den ble startet i juli 2018, og det er jeg som står bak. <br>
+            Den er ment for å hjelpe andre til å få en innføring i web-utvikling eller musikkproduskjon i Ableton Live. <br>
+            <br> Her er et dikt:<br><br>Høstens bleke ansikt titter inn,<br>
+            ullgensern ligger krølla i en skuff,<br>
+            du tar den frem og tenker på alt<br>
+            du gjorde under sommervarmens stråler.<br><br>
+            
+            Ville vinder og blader i høstens farger,<br>
+            du lager en gin, før du kan høre måkebilen<br>
+            i det fjærne. Og atter et hvitt teppe legge seg.<br>
+            Det er høst.<br>
+                                    av Daniel Høifødt<br>
+        </p>
+        <div id="app">
+
+        </div>
+        <img class="main-bilde" src="media/meg_forside.jpg" alt="daniel">
+        <br><p>Dette bildet ble tatt i Skien, 29.07.2018</p>
+    </main>
+    <footer id="footer">
+        <a class="foolink" href="https://www.youtube.com/channel/UCtBC6n-CFdBaKuEpybf3k-w?view_as=subscriber">Min Youtube kanal</a><br>
+        <a class="foolink" href="https://www.facebook.com/daniel.hoifodt">Min <img class="f" src="media/f.png">Facebook profil</a>
+        <p>Copyright &copy; Daniel Høifødt</p>
+    </footer>
+
+    <script type="text/babel">
+
+        class App extends React.Component {
+        
+        
+            render() {
+                return(
+                    <div>
+                        <input type="text"></input>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<App />, document.getElementById('app'));
+          
+          </script>
+
+</body>
+
+</html>

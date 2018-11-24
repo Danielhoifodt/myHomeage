@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/tester.css">
+    <link rel="shortcut icon" type="image/png" href="media/favicon.png">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <title>Daniel Høifødt - Tester</title>
+</head>
+<body class="body">
+    <header id="header">
+        <div id="overskrift">
+            <img id="h1" src="media/h1_header.png" alt="overskrift"><br>
+            <img id="h2" src="media/h2.png" alt="overskrifth2">
+            <div id="container"> 
+                    <ul id="liste">
+                            <li><a><img class="menu" src="media/menu.png"></a>
+                                <ul>
+                                    <li>
+                                        <a href="index.html"><b>Hjem</b></a>
+                                    </li>
+                                    <li>
+                                        <a id="konsulent" href="konsulent.html"><b>Jobbe?</b></a>
+                                    </li>
+                                    <li>
+                                        <a href="bilder.html"><b>Bilder</b></a>
+                                    </li>
+                                    <li>
+                                        <a href="tester.html"><b>Tester</b></a>
+                                    </li>
+                                    <li>
+                                            <a href="musikk.html"><b>Musikk</b></a>
+                                        </li>
+                                    <li><a href="video.html"><b>Video</b></a></li>
+                                    <li>
+                                        <a href="om.html"><b>Om meg</b></a>
+                                    </li>        
+                                    <li>
+                                        <a href="kontakt.html"><b>Kontakt</b></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+            </div>
+            
+        </div>
+    </header>
+    <main class="main">
+        <h3>Tester</h3>
+        <p> Dette er en test for å se om du er gammel nok til å drikke alkohol.
+        </p>
+        <div id="app">
+
+        </div>
+        <br>
+        <img class="main-bilde" src="media/tester.jpg" alt="daniel">
+        <br><p>En som tester! Eller hva skulle jeg lagt ut?</p>
+    </main>
+    <footer id="footer">
+            <a class="foolink" href="https://www.youtube.com/channel/UCtBC6n-CFdBaKuEpybf3k-w?view_as=subscriber">Min Youtube kanal</a><br>
+            <a class="foolink" href="https://www.facebook.com/daniel.hoifodt">Min <img class="f" src="media/f.png">Facebook profil</a>
+        <p>Copyright &copy; Daniel Høifødt</p>
+    </footer>
+
+    
+  <script type="text/babel">
+
+
+
+class App extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            term: "waiting",
+        }
+        this.change = this.change.bind(this);
+        
+        
+    }
+
+    
+    change = (event) => {
+        this.setState({term: event.target.value >= 18 ? <div><p>Du er gammel nok:)</p><img src="./media/glass_pouring.jpg"></img></div> : <div><p>Du er ikke gammel nok:(</p><img src="./media/smokk.jpg"></img></div>})
+    }
+
+        
+    
+
+    render() {
+
+        return(
+            <div>
+                <p>Skriv inn din alder for å se:</p>
+                <input type="text" onChange={this.change}></input>
+                <p>Resultat:</p>
+                {this.state.term}
+            </div>
+        );
+    }
+}
+ReactDOM.render(<App />, document.getElementById('app'));
+  
+  </script>
+</body>
+</html>
